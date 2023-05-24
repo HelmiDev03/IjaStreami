@@ -6,7 +6,7 @@ A Group video calling application
 
 #### 1 - Clone repo
 ```
-git clone https://github.com/HelmiDev03/StreamWithHelmi
+git clone https://github.com/HelmiDev03/IjaStreami
 ```
 
 #### 2 - Install requirements
