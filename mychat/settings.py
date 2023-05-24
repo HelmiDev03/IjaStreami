@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'whitenoise.runserver_nostatic',
     'base',
 ]
 
@@ -49,9 +49,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+       "whitenoise.middleware.WhiteNoiseMiddleware",
+]
 ]
 
 ROOT_URLCONF = 'mychat.urls'
+WSGI_APPLICATION = 'mychat.wsgi.application'
+import dj_database_url
+DATABASES = {
+    'default': dj_database_url.parse('postgres://production_nu29_user:YMbCBqNqxwm0tkNXPb2JJ4yQQQNZeVKU@dpg-ch1vun5269v61fb1b1dg-a.ohio-postgres.render.com/production_nu29')
+}
+
 
 TEMPLATES = [
     {
